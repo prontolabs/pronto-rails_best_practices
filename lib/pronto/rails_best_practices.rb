@@ -27,9 +27,9 @@ module Pronto
         patch = patch_for_error(patches, error)
 
         if patch
-          line = patch.added_lines.select do |added_line|
+          line = patch.added_lines.find do |added_line|
             added_line.new_lineno == error.line_number.to_i
-          end.first
+          end
 
           new_message(line, error) if line
         end
@@ -42,9 +42,9 @@ module Pronto
     end
 
     def patch_for_error(patches, error)
-      patches.select do |patch|
+      patches.find do |patch|
         patch.new_file_full_path.to_s == error.filename
-      end.first
+      end
     end
   end
 end
