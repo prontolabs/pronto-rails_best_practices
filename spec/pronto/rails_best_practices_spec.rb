@@ -6,7 +6,7 @@ module Pronto
     let(:rails_best_practice) { RailsBestPractices.new }
 
     describe '#run' do
-      subject { rails_best_practice.run(patches) }
+      subject { rails_best_practice.run(patches, nil) }
 
       context 'patches are nil' do
         let(:patches) { nil }

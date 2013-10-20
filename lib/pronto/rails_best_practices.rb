@@ -3,7 +3,7 @@ require 'rails_best_practices'
 
 module Pronto
   class RailsBestPractices < Runner
-    def run(patches)
+    def run(patches, _)
       return [] unless patches
 
       patches_with_additions = patches.select { |patch| patch.additions > 0 }
