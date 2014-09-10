@@ -13,8 +13,8 @@ module Pronto
       end
 
       if files.any?
-        analyzer = ::RailsBestPractices::Analyzer.new('.', { 'silent' => true,
-                                                             'only' => files })
+        analyzer = ::RailsBestPractices::Analyzer.new('.', 'silent' => true,
+                                                           'only' => files)
         analyzer.analyze
         messages_for(patches_with_additions, analyzer.errors).compact
       else
