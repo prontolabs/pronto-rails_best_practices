@@ -20,7 +20,7 @@ Gem::Specification.new do |s|
   s.require_paths = ['lib']
 
   s.add_dependency 'pronto', '~> 0.2.0'
-  s.add_dependency 'rails_best_practices', '~> 1.14.0'
+  s.add_dependency 'rails_best_practices', '~> 1.15.0'
   s.add_development_dependency 'rake', '~> 10.3'
   s.add_development_dependency 'rspec', '~> 3.0'
   s.add_development_dependency 'rspec-its', '~> 1.0'
