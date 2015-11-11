@@ -1,7 +1,8 @@
 # -*- encoding: utf-8 -*-
-$LOAD_PATH.push File.expand_path('../lib', __FILE__)
 
+$LOAD_PATH.push File.expand_path('../lib', __FILE__)
 require 'pronto/rails_best_practices/version'
+require 'English'
 
 Gem::Specification.new do |s|
   s.name = 'pronto-rails_best_practices'
@@ -12,11 +13,23 @@ Gem::Specification.new do |s|
   s.homepage = 'http://github.org/mmozuras/pronto-rails_best_practices'
   s.summary = 'Pronto runner for Rails Best Practices, code metric tool for Rails projects'
 
-  s.required_rubygems_version = '>= 1.3.6'
-  s.license = 'MIT'
+  s.licenses = ['MIT']
+  s.required_ruby_version = '>= 1.9.3'
+  s.rubygems_version = '1.8.23'
 
-  s.files = Dir.glob('{lib}/**/*') + %w(LICENSE README.md)
-  s.test_files = `git ls-files -- {spec}/*`.split("\n")
+  s.files = `git ls-files`.split($RS).reject do |file|
+    file =~ %r{^(?:
+    spec/.*
+    |Gemfile
+    |Rakefile
+    |\.rspec
+    |\.gitignore
+    |\.rubocop.yml
+    |\.travis.yml
+    )$}x
+  end
+  s.test_files = []
+  s.extra_rdoc_files = ['LICENSE', 'README.md']
   s.require_paths = ['lib']
 
   s.add_dependency 'pronto', '~> 0.4.0'
