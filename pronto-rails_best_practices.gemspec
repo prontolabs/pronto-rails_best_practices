@@ -11,7 +11,9 @@ Gem::Specification.new do |s|
   s.author = 'Mindaugas Mozūras'
   s.email = 'mindaugas.mozuras@gmail.com'
   s.homepage = 'http://github.org/mmozuras/pronto-rails_best_practices'
-  s.summary = 'Pronto runner for Rails Best Practices, code metric tool for Rails projects'
+  s.summary = <<-EOF
+    Pronto runner for Rails Best Practices, code metric tool for Rails projects
+  EOF
 
   s.licenses = ['MIT']
   s.required_ruby_version = '>= 1.9.3'
