@@ -3,10 +3,10 @@ require 'rails_best_practices'
 
 module Pronto
   class RailsBestPractices < Runner
-    def run(patches, _)
-      return [] unless patches
+    def run
+      return [] unless @patches
 
-      patches_with_additions = patches.select { |patch| patch.additions > 0 }
+      patches_with_additions = @patches.select { |patch| patch.additions > 0 }
 
       files = patches_with_additions.map do |patch|
         Regexp.new(patch.new_file_full_path.to_s)
