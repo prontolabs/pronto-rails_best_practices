@@ -38,7 +38,7 @@ module Pronto
 
     def new_message(line, error)
       Message.new(line.patch.delta.new_file[:path], line, :warning,
-                  error.message.capitalize)
+                  error.message.capitalize, nil, self.class)
     end
 
     def patch_for_error(patches, error)

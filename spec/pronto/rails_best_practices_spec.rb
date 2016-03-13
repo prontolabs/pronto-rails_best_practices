@@ -3,10 +3,10 @@ require 'ostruct'
 
 module Pronto
   describe RailsBestPractices do
-    let(:rails_best_practice) { RailsBestPractices.new }
+    let(:rails_best_practice) { RailsBestPractices.new(patches) }
 
     describe '#run' do
-      subject { rails_best_practice.run(patches, nil) }
+      subject { rails_best_practice.run }
 
       context 'patches are nil' do
         let(:patches) { nil }
