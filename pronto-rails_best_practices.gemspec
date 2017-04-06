@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.platform = Gem::Platform::RUBY
   s.author = 'Mindaugas Mozūras'
   s.email = 'mindaugas.mozuras@gmail.com'
-  s.homepage = 'http://github.org/mmozuras/pronto-rails_best_practices'
+  s.homepage = 'http://github.com/mmozuras/pronto-rails_best_practices'
   s.summary = <<-EOF
     Pronto runner for Rails Best Practices, code metric tool for Rails projects
   EOF
